@@ -172,7 +172,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 async function loadGroupLink() {
-  const snap = await getDoc(doc(db, "LandingPages", "page1"));
+  const snap = await getDoc(doc(db, "LandingPages", "page2"));
   if (snap.exists()) {
     document.getElementById("joinBtn").href = snap.data().groupLink;
   }
